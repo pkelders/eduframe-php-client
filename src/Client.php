@@ -235,10 +235,24 @@ class Client
         return new CatalogVariant($this->connection, $attributes);
     }
 
-    /**
-     * @return \Eduframe\Connection
+     /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\CourseTabContent
      */
-    public function getConnection() {
-        return $this->connection;
+    public function courseTabContents( $attributes = [] ) {
+        return new CourseTabContent( $this->connection, $attributes );
     }
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\CourseTab
+     */
+    public function courseTab( $attributes = [] ) {
+        return new CourseTab( $this->connection, $attributes );
+    }
+	/**
+	 * @return \Eduframe\Connection
+	 */
+	public function getConnection() {
+		return $this->connection;
+	}
 }

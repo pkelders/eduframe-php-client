@@ -7,13 +7,16 @@ use Eduframe\Resource;
 class CourseTabContent extends Resource
 {
 
-    /**
-     * @var array
-     */
-    protected $fillable = [
-        'content',
-        'course_tab'
-    ];
+	/**
+	 * @var array
+	 */
+	protected $fillable = [
+        'id',
+        'course_tab_id',
+		'content',
+		'course_tab'
+	];
+
 
     /**
      * @var string

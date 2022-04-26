@@ -6,10 +6,11 @@ use Eduframe\Resource;
 use Eduframe\Resources\Credits\Definition;
 use Eduframe\Traits\FindAll;
 use Eduframe\Traits\FindOne;
+use Eduframe\Traits\Storable;
 
-class Course extends Resource
-{
-    use FindAll, FindOne;
+class Course extends Resource {
+	use FindAll, FindOne, Storable;
+
 
     /**
      * @var array
