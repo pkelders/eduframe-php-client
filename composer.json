@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/edudex2eduframe",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "pkelders",
+      "email": "email@example.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/pkelders/eduframe-php-client"
+    }
+  ],
+  "require": {
+    "drieam/eduframe-php-client": "dev-main",
+    "lum/simpledom": ">=v3.0.0"
+  }
+}
