@@ -23,6 +23,8 @@ class Course extends Resource {
 		'meta_title',
 		'meta_description',
 		'code',
+        'cost',
+        'cost_scheme',
 		'duration',
 		'starting_price',
 		'signup_url',
