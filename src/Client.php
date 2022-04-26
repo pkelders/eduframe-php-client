@@ -6,6 +6,8 @@ use Eduframe\Resources\Account;
 use Eduframe\Resources\Address;
 use Eduframe\Resources\Category;
 use Eduframe\Resources\Course;
+use Eduframe\Resources\CourseTabContent;
+use Eduframe\Resources\CourseTab;
 use Eduframe\Resources\Edition;
 use Eduframe\Resources\Enrollment;
 use Eduframe\Resources\Label;
