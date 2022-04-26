@@ -5,9 +5,10 @@ namespace Eduframe\Resources;
 use Eduframe\Resource;
 use Eduframe\Traits\FindAll;
 use Eduframe\Traits\FindOne;
+use Eduframe\Traits\Storable;
 
 class Meeting extends Resource {
-	use FindAll, FindOne;
+	use FindAll, FindOne, Storable;
 
 	/**
 	 * @var array

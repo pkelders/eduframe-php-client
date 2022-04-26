@@ -10,6 +10,7 @@ class CourseTab extends Resource {
 	 * @var array
 	 */
 	protected $fillable = [
+        'id',
 		'name',
 		'position'
 	];

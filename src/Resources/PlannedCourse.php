@@ -5,9 +5,11 @@ namespace Eduframe\Resources;
 use Eduframe\Resource;
 use Eduframe\Traits\FindAll;
 use Eduframe\Traits\FindOne;
+use Eduframe\Traits\Storable;
+
 
 class PlannedCourse extends Resource {
-	use FindAll, FindOne;
+	use FindAll, FindOne, Storable;
 
 	/**
 	 * @var array

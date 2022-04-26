@@ -203,7 +203,20 @@ class Client {
 	public function teachers( $attributes = [] ) {
 		return new Teacher( $this->connection, $attributes );
 	}
-
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\CourseTabContent
+     */
+    public function courseTabContents( $attributes = [] ) {
+        return new CourseTabContent( $this->connection, $attributes );
+    }
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\CourseTab
+     */
+    public function courseTab( $attributes = [] ) {
+        return new CourseTab( $this->connection, $attributes );
+    }
 	/**
 	 * @return \Eduframe\Connection
 	 */
