@@ -180,6 +180,7 @@ class Connection
                 }
             }
 
+
             return $json;
         } catch ( Exception $e ) {
             throw $this->parseExceptionForErrorMessages($e);
