@@ -24,6 +24,8 @@ use Eduframe\Resources\Program;
 use Eduframe\Resources\Referral;
 use Eduframe\Resources\SignupQuestion;
 use Eduframe\Resources\Teacher;
+use Eduframe\Resources\CatalogProduct;
+use Eduframe\Resources\CatalogVariant;
 
 /**
  * Class Eduframe
@@ -78,7 +80,7 @@ class Client {
 
 	/**
 	 * @param array $attributes
-	 * @return \Eduframe\Resources\Course
+	 * @return \Eduframe\Resources\Program
 	 */
 	public function programs( $attributes = [] ) {
 		return new Program( $this->connection, $attributes );
@@ -119,27 +121,27 @@ class Client {
 	}
 
 	/**
-     * @param array $attributes
-     * @return \Eduframe\Resources\Label
-     */
-    public function labels( $attributes = [] ) {
-        return new Label( $this->connection, $attributes );
-	}
-	
-	/**
-     * @param array $attributes
-     * @return \Eduframe\Resources\Lead
-     */
-    public function leads( $attributes = [] ) {
-        return new Lead( $this->connection, $attributes );
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\Label
+	 */
+	public function labels( $attributes = [] ) {
+		return new Label( $this->connection, $attributes );
 	}
 
 	/**
-     * @param array $attributes
-     * @return \Eduframe\Resources\LeadInterest
-     */
-    public function lead_interests( $attributes = [] ) {
-        return new LeadInterest( $this->connection, $attributes );
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\Lead
+	 */
+	public function leads( $attributes = [] ) {
+		return new Lead( $this->connection, $attributes );
+	}
+
+	/**
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\LeadInterest
+	 */
+	public function lead_interests( $attributes = [] ) {
+		return new LeadInterest( $this->connection, $attributes );
 	}
 
 	/**
@@ -164,9 +166,9 @@ class Client {
 	 */
 	public function payment_methods( $attributes = [] ) {
 		return new PaymentMethod( $this->connection, $attributes );
-    }
-    
-    /**
+	}
+
+	/**
 	 * @param array $attributes
 	 * @return \Eduframe\Resources\PaymentOption
 	 */
@@ -188,7 +190,7 @@ class Client {
 	 */
 	public function referrals( $attributes = [] ) {
 		return new Referral( $this->connection, $attributes );
-	}    
+	}
 
 	/**
 	 * @param array $attributes
@@ -219,6 +221,22 @@ class Client {
     public function courseTab( $attributes = [] ) {
         return new CourseTab( $this->connection, $attributes );
     }
+	/**
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\CatalogProduct
+	 */
+	public function catalog_products( array $attributes = [] ): CatalogProduct {
+		return new CatalogProduct( $this->connection, $attributes );
+	}
+
+	/**
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\CatalogVariant
+	 */
+	public function catalog_variants( array $attributes = [] ): CatalogVariant {
+		return new CatalogVariant( $this->connection, $attributes );
+	}
+
 	/**
 	 * @return \Eduframe\Connection
 	 */

@@ -16,9 +16,13 @@ class Order extends Resource {
 		'id',
 		'number',
 		'status',
+		'account_id',
+		'creator_id',
+		'catalog_variant_id',
 		'start_date',
 		'end_date',
 		'number_of_students',
+		'order_items',
 		'updated_at',
 		'created_at'
 	];
@@ -32,4 +36,14 @@ class Order extends Resource {
 	 * @var string
 	 */
 	protected $namespace = 'order';
+
+	/**
+	 * @var array
+	 */
+	protected $multipleNestedEntities = [
+		'order_items' => [
+			'entity' => OrderItem::class,
+			'type'   => self::NESTING_TYPE_NESTED_OBJECTS,
+		]
+	];
 }

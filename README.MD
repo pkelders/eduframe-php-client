@@ -5,10 +5,10 @@
 PHP Client for Eduframe V1
 
 ## Installation
-This package is not puslished on packagist yet.
+This package is puslished on packagist.
 
 ```
-composer ..
+composer require drieam/eduframe-php-client
 ```
 
 ### Access token
