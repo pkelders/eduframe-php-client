@@ -18,6 +18,7 @@ class Edition extends Resource {
 		'name',
 		'slug',
 		'cost',
+		'custom',
 		'min_participants',
 		'max_participants',
 		'current_participants',

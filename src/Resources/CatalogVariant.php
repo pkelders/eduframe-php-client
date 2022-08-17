@@ -21,6 +21,7 @@ class CatalogVariant extends Resource {
         'is_published',
         'cost_scheme',
         'cost',
+        'custom',
         'availability',
         'updated_at',
         'created_at',
