@@ -23,6 +23,7 @@ class Program extends Resource {
 		'course_tab_contents',
 		'labels',
 		'custom',
+		'signup_url',
 		'updated_at',
 		'created_at'
 	];
