@@ -27,6 +27,7 @@ use Eduframe\Resources\SignupQuestion;
 use Eduframe\Resources\Teacher;
 use Eduframe\Resources\CatalogProduct;
 use Eduframe\Resources\CatalogVariant;
+use Eduframe\Resources\Invoice;
 
 /**
  * Class Eduframe
@@ -165,12 +166,19 @@ class Client
         return new Meeting($this->connection, $attributes);
     }
 
+	/**
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\Order
+	 */
+	public function orders($attributes = []) {
+		return new Order($this->connection, $attributes);
+	}
     /**
      * @param array $attributes
-     * @return \Eduframe\Resources\Order
+     * @return \Eduframe\Resources\Invoice
      */
-    public function orders($attributes = []) {
-        return new Order($this->connection, $attributes);
+    public function invoices($attributes = []) {
+        return new Invoice($this->connection, $attributes);
     }
 
     /**
