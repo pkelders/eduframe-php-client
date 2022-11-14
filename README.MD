@@ -2,7 +2,9 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/drieam/eduframe-php-client/badge)](https://www.codefactor.io/repository/github/drieam/eduframe-php-client)
 
-PHP Client for Eduframe V1
+### ***DISCLAIMER***: This is not a full representation of the Eduframe api. Feel free to open a pull request for adding missing endpoints and properties.
+
+<br >
 
 ## Installation
 This package is puslished on packagist.
