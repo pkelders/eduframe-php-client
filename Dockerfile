@@ -1,24 +1,26 @@
-# see https://github.com/cmaessen/docker-php-sendmail for more information
+FROM php:8.1
 
-FROM php:7.1-fpm
+# Environment
+ENV APP_HOME=/app
 
-RUN apt-get update && apt-get install -q -y msmtp mailutils && rm -rf /var/lib/apt/lists/*
+# Set app user and directory
+WORKDIR $APP_HOME
 
-RUN docker-php-ext-install mysql mysqli sysvsem
+# Install dependencies
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git libzip-dev zip && \
+    pecl install ast && docker-php-ext-enable ast && \
+    docker-php-ext-install zip
 
-RUN pecl install xdebug-2.5.5 \
-    && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "[XDebug]" >> /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.remote_log=/tmp/xdebug.log" >> /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.remote_autostart=on" >> /usr/local/etc/php/conf.d/xdebug.ini
+# Installing composer
+COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
 
-RUN echo "hostname=localhost.localdomain" > /etc/ssmtp/ssmtp.conf \
-    && echo "root=root@localhost" >> /etc/ssmtp/ssmtp.conf \
-    && echo "mailhub=maildev" >> /etc/ssmtp/ssmtp.conf \
-    && echo "sendmail_path=sendmail -i -t" >> /usr/local/etc/php/conf.d/php-sendmail.ini
+# Copy composer dependencies
+COPY composer.json composer.lock $APP_HOME/
 
-RUN echo "[Date]" >> /usr/local/etc/php/conf.d/php-sendmail.ini \
-    && echo "date.timezone = Europe/Amsterdam" >> /usr/local/etc/php/conf.d/php-sendmail.ini
+# Install all composer dependencies
+RUN composer install --optimize-autoloader
 
-RUN echo "localhost localhost.localdomain" >> /etc/hosts
+# Copy source files
+COPY . $APP_HOME
