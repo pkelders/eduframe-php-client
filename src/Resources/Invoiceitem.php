@@ -13,7 +13,7 @@ class InvoiceItem extends Resource {
 		'id',
         'name',
         'units',
-        'units_price',
+        'unit_price',
         'invoice_vat_id',
         'catalog_variant_id',
         'updated_at',
