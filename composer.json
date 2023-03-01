@@ -1,6 +1,6 @@
 {
   "name": "drieam/eduframe-php-client",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "library",
   "minimum-stability": "stable",
   "description": "A PHP Client for the Eduframe V1 API",
