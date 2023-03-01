@@ -23,6 +23,7 @@ class Order extends Resource {
 		'end_date',
 		'number_of_students',
 		'order_items',
+        'planned_course_id',
 		'updated_at',
 		'created_at'
 	];
