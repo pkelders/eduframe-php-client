@@ -10,23 +10,24 @@ class Order extends Resource
 {
     use FindAll, FindOne;
 
-    /**
-     * @var array
-     */
-    protected $fillable = [
-        'id',
-        'number',
-        'status',
-        'account_id',
-        'creator_id',
-        'catalog_variant_id',
-        'start_date',
-        'end_date',
-        'number_of_students',
-        'order_items',
-        'updated_at',
-        'created_at'
-    ];
+	/**
+	 * @var array
+	 */
+	protected $fillable = [
+		'id',
+		'number',
+		'status',
+		'account_id',
+		'creator_id',
+		'catalog_variant_id',
+		'start_date',
+		'end_date',
+		'number_of_students',
+		'order_items',
+        'planned_course_id',
+		'updated_at',
+		'created_at'
+	];
 
     /**
      * @var string

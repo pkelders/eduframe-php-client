@@ -28,6 +28,8 @@ use Eduframe\Resources\Teacher;
 use Eduframe\Resources\CatalogProduct;
 use Eduframe\Resources\CatalogVariant;
 use Eduframe\Resources\Invoice;
+use Eduframe\Resources\InvoiceItem;
+
 
 /**
  * Class Eduframe
