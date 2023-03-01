@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Drieam/eduframe-php-client/compare/v1.0.1...v1.1.0) (2023-02-15)
+
+
+### Features
+
+* Add program elements endpoint ([13e1aaa](https://github.com/Drieam/eduframe-php-client/commit/13e1aaae6480b519ccaad2b8196552c0d8500941))
+
 ## [1.0.1](https://github.com/Drieam/eduframe-php-client/compare/v1.0.0...v1.0.1) (2023-01-20)
 
 
