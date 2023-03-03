@@ -15,6 +15,7 @@ class Order extends Resource {
 	protected $fillable = [
 		'id',
 		'number',
+        'cost_scheme',
 		'status',
 		'account_id',
 		'creator_id',

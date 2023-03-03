@@ -6,7 +6,7 @@ use Eduframe\Resource;
 
 class InvoiceItem extends Resource {
 
-	/** used by invoice
+	/** used by invoice to expose invoice items
 	 * @var array
 	 */
 	protected $fillable = [
@@ -20,6 +20,7 @@ class InvoiceItem extends Resource {
         'created_at',
 
 	];
+
 
 	/**
 	 * @var string
