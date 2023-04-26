@@ -16,6 +16,7 @@ use Eduframe\Resources\Lead;
 use Eduframe\Resources\LeadInterest;
 use Eduframe\Resources\Location;
 use Eduframe\Resources\Meeting;
+use Eduframe\Resources\MeetingLocation;
 use Eduframe\Resources\Variant;
 use Eduframe\Resources\Order;
 use Eduframe\Resources\PaymentMethod;
@@ -166,6 +167,15 @@ class Client {
 	public function meetings( $attributes = [] ) {
 		return new Meeting( $this->connection, $attributes );
 	}
+
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\MeetingLocation
+     */
+    public function meetings_locations( $attributes = [] ) {
+        return new MeetingLocation( $this->connection, $attributes );
+    }
+
 
 	/**
 	 * @param array $attributes
