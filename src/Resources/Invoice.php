@@ -33,6 +33,7 @@ class Invoice extends Resource {
         'total_open',
         'account_name',
         'invoice_items',
+        'open_at',
 
         'pdf_url',
         'xml_url',
