@@ -192,14 +192,20 @@ class Client
     public function invoices($attributes = []) {
         return new Invoice($this->connection, $attributes);
     }
-
     /**
      * @param array $attributes
-     * @return \Eduframe\Resources\PaymentMethod
+     * @return \Eduframe\Resources\InvoiceItem
      */
-    public function payment_methods($attributes = []) {
-        return new PaymentMethod($this->connection, $attributes);
+    public function invoicesItem($attributes = []) {
+        return new InvoiceItem($this->connection, $attributes);
     }
+	/**
+	 * @param array $attributes
+	 * @return \Eduframe\Resources\PaymentMethod
+	 */
+	public function payment_methods($attributes = []) {
+		return new PaymentMethod($this->connection, $attributes);
+	}
 
     /**
      * @param array $attributes
