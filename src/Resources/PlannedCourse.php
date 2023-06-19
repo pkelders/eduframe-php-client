@@ -9,7 +9,7 @@ use Eduframe\Traits\Storable;
 
 
 class PlannedCourse extends Resource {
-	use FindAll, FindOne, Storable;
+	use FindAll, FindOne, Storable, Removable;
 
 
     /**
