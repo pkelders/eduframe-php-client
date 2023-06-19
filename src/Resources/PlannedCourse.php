@@ -6,6 +6,7 @@ use Eduframe\Resource;
 use Eduframe\Traits\FindAll;
 use Eduframe\Traits\FindOne;
 use Eduframe\Traits\Storable;
+use Eduframe\Traits\Removable;
 
 
 class PlannedCourse extends Resource {
