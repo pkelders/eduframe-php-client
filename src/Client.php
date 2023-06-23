@@ -30,6 +30,7 @@ use Eduframe\Resources\CatalogProduct;
 use Eduframe\Resources\CatalogVariant;
 use Eduframe\Resources\Invoice;
 use Eduframe\Resources\InvoiceItem;
+use Eduframe\Resources\Task;
 
 
 /**
@@ -251,6 +252,13 @@ class Client {
      */
     public function courseTabContents( $attributes = [] ) {
         return new CourseTabContent( $this->connection, $attributes );
+    }
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\Task
+     */
+    public function tasks( $attributes = [] ) {
+        return new Task( $this->connection, $attributes );
     }
     /**
      * @param array $attributes
