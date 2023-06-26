@@ -20,6 +20,7 @@ class Meeting extends Resource {
 		'description',
 		'description_dashboard',
 		'meeting_location_id',
+        'teachers',
 		'start_date_time',
 		'end_date_time',
 		'updated_at',
@@ -30,6 +31,14 @@ class Meeting extends Resource {
 	 * @var string
 	 */
 	protected $endpoint = 'meetings';
+
+    protected $multipleNestedEntities = [
+
+        'teachers'    => [
+            'entity' => Teacher::class,
+            'type'   => self::NESTING_TYPE_ARRAY_OF_OBJECTS,
+        ]
+    ];
 
 	/**
 	 * @var string
