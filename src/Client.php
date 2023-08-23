@@ -31,6 +31,7 @@ use Eduframe\Resources\CatalogVariant;
 use Eduframe\Resources\Invoice;
 use Eduframe\Resources\InvoiceItem;
 use Eduframe\Resources\Task;
+use Eduframe\Resources\Attendance;
 
 
 /**
@@ -259,6 +260,13 @@ class Client {
      */
     public function tasks( $attributes = [] ) {
         return new Task( $this->connection, $attributes );
+    }
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\Attendance
+     */
+    public function attendances( $attributes = [] ) {
+        return new Attendance( $this->connection, $attributes );
     }
     /**
      * @param array $attributes
