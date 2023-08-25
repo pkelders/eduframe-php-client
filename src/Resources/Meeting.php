@@ -40,6 +40,14 @@ class Meeting extends Resource {
         ]
     ];
 
+    protected $multipleNestedEntities = [
+
+        'teachers'    => [
+            'entity' => Teacher::class,
+            'type'   => self::NESTING_TYPE_ARRAY_OF_OBJECTS,
+        ]
+    ];
+
 	/**
 	 * @var string
 	 */
