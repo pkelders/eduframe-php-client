@@ -17,6 +17,7 @@ use Eduframe\Resources\LeadInterest;
 use Eduframe\Resources\Location;
 use Eduframe\Resources\Meeting;
 use Eduframe\Resources\MeetingLocation;
+use Eduframe\Resources\User;
 use Eduframe\Resources\Variant;
 use Eduframe\Resources\Order;
 use Eduframe\Resources\PaymentMethod;
@@ -32,6 +33,8 @@ use Eduframe\Resources\Invoice;
 use Eduframe\Resources\InvoiceItem;
 use Eduframe\Resources\Task;
 use Eduframe\Resources\Attendance;
+
+
 
 
 /**
@@ -292,6 +295,13 @@ class Client
      */
     public function courseTab( $attributes = [] ) {
         return new CourseTab( $this->connection, $attributes );
+    }
+    /**
+     * @param array $attributes
+     * @return \Eduframe\Resources\User
+     */
+    public function users( $attributes = [] ) {
+        return new User( $this->connection, $attributes );
     }
 	/**
 	 * @return \Eduframe\Connection
