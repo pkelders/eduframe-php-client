@@ -30,8 +30,20 @@ class Meeting extends Resource {
     /**
      * @var string
      */
+    protected $model_name = 'Meeting';
+
+    /**
+     * @var string
+     */
     protected $endpoint = 'meetings';
 
+    /**
+     * @var string
+     */
+    protected $namespace = 'meeting';
+
+
+
     protected $multipleNestedEntities = [
 
         'teachers'    => [
@@ -40,16 +52,6 @@ class Meeting extends Resource {
         ]
     ];
 
-    protected $multipleNestedEntities = [
 
-        'teachers'    => [
-            'entity' => Teacher::class,
-            'type'   => self::NESTING_TYPE_ARRAY_OF_OBJECTS,
-        ]
-    ];
 
-	/**
-	 * @var string
-	 */
-	protected $namespace = 'meeting';
 }
