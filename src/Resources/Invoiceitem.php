@@ -22,6 +22,12 @@ class InvoiceItem extends Resource {
 	];
 
 
+    /**
+     * @var string
+     */
+    protected $model_name = 'InvoiceItem';
+
+
 	/**
 	 * @var string
 	 */
